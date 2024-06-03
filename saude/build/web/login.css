@@ -1,0 +1,59 @@
+.login-container {
+    background-color: #ffffffd7; 
+    padding: 20px;
+    margin: 50px auto;
+    width: 370px; /* Diminuir a largura do contêiner */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"],
+.login-container input[type="tel"],
+.login-container input[type="date"],
+.login-container select[name="escolha"] {
+    width: 94%; /* Ajustar a largura dos campos de entrada */
+    padding: 8px; /* Diminuir o padding dos campos de entrada */
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garantir que padding e border sejam incluídos na largura e altura total do elemento */
+}
+
+.login-container button {
+    width: 90%; /* Ajustar a largura do botão */
+    padding: 8px; /* Diminuir o padding do botão */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #555;
+}
+
+.login-links {
+    margin-top: 20px;
+}
+
+.login-links a {
+    display: block;
+    color: #007BFF;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}

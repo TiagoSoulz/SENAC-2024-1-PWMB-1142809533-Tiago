@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Saúde - Registro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main>
+        <div class="login-container">
+            <h1>Registro para Médicos</h1>
+            <form action="CadastroServlet" method="POST" onsubmit="return registrar()">
+                <input type="text" name="nome" placeholder="Nome Completo" required>
+
+                <input type="text" name="crm" placeholder="CRM" oninput="allowOnlyNumbers(this)" required>
+                <input type="text" name="endereco" placeholder="Endereço" required>
+                <input type="tel" name="telefone" placeholder="Telefone" oninput="allowOnlyNumbers(this)" required>
+                
+            <input type="date" id="data-nascimento" name="data_nascimento" required>
+
+                <select name="especializacao" required>
+                    <option value="" disabled selected>Selecione a Especialização</option>
+                    <option value="Cardiologia">Cardiologia</option>
+                    <option value="Dermatologia">Dermatologia</option>
+                    <option value="Ginecologia">Ginecologia</option>
+                    <option value="Ortopedia">Ortopedia</option>
+                    <option value="Neurologia">Neurologia</option>
+                    <option value="Pediatria">Pediatria</option>
+                    <option value="Psiquiatria">Psiquiatria</option>
+                    <option value="Oftalmologia">Oftalmologia</option>
+                    <option value="Endocrinologia">Endocrinologia</option>
+                    <option value="Gastroenterologia">Gastroenterologia</option>
+                    <option value="Nefrologia">Nefrologia</option>
+                    <option value="Oncologia">Oncologia</option>
+                    <option value="Pneumologia">Pneumologia</option>
+                    <option value="Reumatologia">Reumatologia</option>
+                </select>
+
+                <select name="sexo" required>
+                    <option value="" disabled selected>Selecione o Sexo</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
+                </select>
+                
+                <select name="estado_civil" required>
+                    <option value="" disabled selected>Selecione o Estado Civil</option>
+                    <option value="Solteiro(a)">Solteiro(a)</option>
+                    <option value="Casado(a)">Casado(a)</option>
+                    <option value="Divorciado(a)">Divorciado(a)</option>
+                    <option value="Viúvo(a)">Viúvo(a)</option>
+                </select>
+
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="senha" placeholder="Senha" required>
+                <input type="password" name="confirm-password" placeholder="Confirmar Senha" required>
+                
+                <button type="submit">Registrar</button>
+            </form>
+            <div class="login-links">
+                <a href="login.html">Já tem uma conta? Entrar</a> 
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Plataforma de Saúde. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

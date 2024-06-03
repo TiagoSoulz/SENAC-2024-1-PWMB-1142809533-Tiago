@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Saúde - Pacientes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Sistemas de Registros Médicos Eletrônicos (EMR)</h1>
+        <nav>
+            <ul>
+                
+                <li><a href="index.html">Página inicial</a></li>
+                <li><a href="especialistas.html">Especialistas</a></li>
+                <li><a href="pacientes.html">Pacientes</a></li>
+                <li><a href="servicos">Serviços</a></li>
+                <li><a href="contato">Contato</a></li>
+                <li><a href="grafico">Gráfico</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulário de CRUD de Pacientes -->
+    <div class="button-container">
+        <button class="crud-button" onclick="showForm('search-form')">Buscar paciente</button>
+        <button class="crud-button" onclick="showForm('insert-form')">Inserir paciente</button>
+        <button class="crud-button" onclick="showForm('update-form')">Alterar paciente</button>
+        <button class="crud-button" onclick="showForm('delete-form')">Excluir paciente</button>
+    </div>
+
+ <div id="insert-form" class="crud-form" style="display: none;">
+    <h2>Inserir novo paciente</h2>
+    <div class="form-container">
+        <!-- Abas -->
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'informacoes')">Informações Pessoais</div>
+            <div class="tab" onclick="openTab(event, 'tratamento')">Tratamento</div>
+            <div class="tab" onclick="openTab(event, 'diagnostico')">Diagnóstico</div>
+            <div class="tab" onclick="openTab(event, 'historico')">Histórico Médico</div>
+            <div class="tab" onclick="openTab(event, 'agendamento')">Agendamento</div>
+        </div>
+        
+        <div id="informacoes" class="tabcontent">
+            <h3>Informações Pessoais</h3>
+            <form id="patient-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome" required>
+
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero">
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="tipo-sanguineo">Tipo Sanguíneo:</label>
+                <input type="text" id="tipo-sanguineo" name="tipo-sanguineo">
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco">
+                
+                <button type="submit">Inserir</button>
+            </form>
+        </div>
+
+        <div id="tratamento" class="tabcontent">
+            <h3>Tratamento</h3>
+        </div>
+
+        <div id="diagnostico" class="tabcontent">
+            <h3>Diagnóstico</h3>
+        </div>
+
+        <div id="historico" class="tabcontent">
+            <h3>Histórico Médico</h3>
+        </div>
+
+        <div id="agendamento" class="tabcontent">
+            <h3>Agendamento</h3>
+        </div>
+    </div>
+</div>
+    
+        <footer>
+    <p>&copy; 2024 Plataforma de Saúde</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

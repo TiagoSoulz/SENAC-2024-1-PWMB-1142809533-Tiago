@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Saúde - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <main>
+        <div class="login-container">
+            <h1>Login para Médicos</h1>
+            <form action="/login" method="POST">
+                <input type="text" name="email" placeholder="Email ou Registro Médico" required>
+                <input type="password" name="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <div class="login-links">
+                <a href="/forgot-password">Esqueceu a Senha?</a>
+                <a href="registro.html">Registrar-se</a> <!-- Link para a página de registro -->
+                <a href="/support">Suporte ao Usuário</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Plataforma de Saúde. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
